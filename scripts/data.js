@@ -65,21 +65,77 @@ export const data = {
         "마",
     ],
     locations: [
-        {name: "도서관", suffix_group_index: 0},
-        {name: "시험장", suffix_group_index: 0},
-        {name: "공부방", suffix_group_index: 0},
-        {name: "경로당", suffix_group_index: 1},
-        {name: "노인정", suffix_group_index: 1},
-        {name: "어린이집", suffix_group_index: 2},
-        {name: "유치원", suffix_group_index: 2},
-        {name: "길거리", suffix_group_index: 3},
-        {name: "급식실", suffix_group_index: 4},
-    ],
-    suffix_groups: [
-        [["박수", "휘파람"], ["빌런"]],
-        [["지팡이"], ["도둑", "파괴범"]],
-        [["가방", "장난감"], ["도둑"]],
-        [["자전거", "킥보드"], ["뺑소니"]],
-        [["잔반", "음쓰"], ["처리반"]],
+        {
+            name: "도서관",
+            suffixGroup: [["박수", "휘파람"], ["빌런"]],
+        },
+        {
+            name: "시험장",
+            suffixGroup: [["박수", "휘파람"], ["빌런"]],
+        },
+        {
+            name: "공부방",
+            suffixGroup: [["박수", "휘파람"], ["빌런"]],
+        },
+        {
+            name: "경로당",
+            suffixGroup: [["지팡이", "틀니"], ["도둑", "파괴범"]],
+        },
+        {
+            name: "노인정",
+            suffixGroup: [["지팡이", "틀니"], ["도둑", "파괴범"]],
+        },
+        {
+            name: "어린이집",
+            suffixGroup: [["가방", "장난감"], ["도둑"]],
+        },
+        {
+            name: "유치원",
+            suffixGroup: [["가방", "장난감"], ["도둑"]],
+        },
+        {
+            name: "길거리",
+            suffixGroup: [["자전거", "킥보드"], ["뺑소니"]],
+        },
+        {
+            name: "급식실",
+            suffixGroup: [["잔반", "음쓰"], ["처리반", "시식가"]],
+        },
+        {
+            name: "납골당",
+            suffixGroup: [["유골"], ["도둑"]],
+        },
+        {
+            name: "교회",
+            suffixGroup: [["목탁"], ["연주자"]],
+        },
+        {
+            name: "성당",
+            suffixGroup: [["목탁"], ["연주자"]],
+        },
+        {
+            name: "목욕탕",
+            suffixGroup: [["비누", "수건"], ["도둑"]],
+        },
+        {
+            name: "키즈카페",
+            suffixGroup: [["인형", "장난감"], ["도둑"]],
+        },
+        {
+            name: "피시방",
+            suffixGroup: [["모니터", "키보드", "마우스"], ["도둑", "샷건러", "파괴범"]],
+        },
+        {
+            name: "화장실",
+            suffixGroup: [["세면기", "소변기"], ["똥", "설사", "오줌"], ["테러범"]],
+        },
+        {
+            name: "금연구역",
+            suffixGroup: [["담배꽁초"], ["테러범", "빌런"]],
+        },
+        {
+            name: "공원",
+            suffixGroup: [["개똥"], ["테러범", "빌런"]],
+        },
     ],
 };

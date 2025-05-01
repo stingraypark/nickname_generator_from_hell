@@ -7,11 +7,13 @@ function pickRandom(arr) {
 
 function generateNickname() {
     // OPTIONS - CHANGE!!!
-    const useName = true;
-    const useManualName = true;
-    const manualName = "박가온";
-    const nameGender = "M";
-    const removeSpace = true;
+    const useName = true; // true/false
+    const useManualName = false; // true/false
+    const manualName = "박가온"; // string
+    const useManualGender = true; // true/false
+    const namefeature = "M"; // F/M
+    const nameGender = "M"; // F/M
+    const removeSpace = true; // true/false
 
     // Init
     let result = ""
@@ -21,7 +23,7 @@ function generateNickname() {
     result += `${location.name} `;
 
     // Add suffix
-    const suffixGroup = data.suffixGroups[location.suffixGroupIndex];
+    const suffixGroup = location.suffixGroup;
     for (let i = 0; i < suffixGroup.length; i++) {
         result += `${pickRandom(suffixGroup[i])} `;
     }
@@ -34,6 +36,16 @@ function generateNickname() {
     // Add random name
     if (useName && !useManualName) {
         result += pickRandom(data.familyNames);
+
+        let names = [];
+
+        for (let i = 0; i < data.names.length; i++) {
+            if (!useManualGender || data.names[i].gender == nameGender) {
+                names.push(data.names[i].name)
+            }
+        }
+
+        result += pickRandom(names);
     }
 
     // Space removal
@@ -45,4 +57,7 @@ function generateNickname() {
     return result;
 }
 
-console.log(generateNickname());
+// TEST!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+for (let i = 0; i < 20; i++){
+    console.log(generateNickname());
+}
