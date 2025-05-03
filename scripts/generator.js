@@ -18,14 +18,10 @@ function generateNickname() {
     // Init
     let result = ""
 
-    // Add location
-    const location = pickRandom(data.locations);
-    result += `${location.name} `;
-
-    // Add suffix
-    const suffixGroup = location.suffixGroup;
-    for (let i = 0; i < suffixGroup.length; i++) {
-        result += `${pickRandom(suffixGroup[i])} `;
+    // Add nicknames
+    const nicknameChunk = pickRandom(data.nicknameChunks);
+    for (let i = 0; i < nicknameChunk.length; i++) {
+        result += `${pickRandom(nicknameChunk[i])} `;
     }
 
     // Add manual name
