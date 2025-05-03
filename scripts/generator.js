@@ -11,7 +11,7 @@ function generateNickname() {
     const useManualName = false; // true/false
     const manualName = "박가온"; // string
     const useManualGender = true; // true/false
-    const namefeature = "M"; // F/M
+    const namefeature = ""; // CHANGE!!!!CHANGE!!!!CHANGE!!!!
     const nameGender = "M"; // F/M
     const removeSpace = true; // true/false
 
@@ -59,5 +59,6 @@ function generateNickname() {
 
 // TEST!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 for (let i = 0; i < 20; i++){
-    console.log(generateNickname());
+    let nickname = generateNickname();
+    document.getElementById("nickname-field").innerText = nickname;
 }
