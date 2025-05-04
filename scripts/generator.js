@@ -8,12 +8,13 @@ function pickRandom(arr) {
 // Generate nickname function
 function generateNickname() {
     // OPTIONS - CHANGE!!!
-    const useName = true; // true/false
-    const useManualName = false; // true/false
-    const manualName = "박가온"; // string
-    const useManualGender = true; // true/false
-    const nameGender = "M"; // F/M
-    const removeSpace = true; // true/false
+    const useName = document.getElementById("useName").checked;
+    const useManualName = !document.getElementById("dontUseManualName").checked;
+    const manualName = document.getElementById("manualName").value;
+    const randomNameSelectText = document.getElementById("nameGender").value;
+    const useManualGender = !(randomNameSelectText == "MF");
+    const nameGender = randomNameSelectText;
+    const removeSpace = document.getElementById("removeSpace").checked;
 
     // Init
     let result = ""
@@ -36,8 +37,8 @@ function generateNickname() {
         let names = [];
 
         for (let i = 0; i < data.names.length; i++) {
-            if (!useManualGender || data.names[i].gender == nameGender) {
-                names.push(data.names[i].name)
+            if (!useManualGender || nameGender.includes(data.names[i].gender)) {
+                names.push(data.names[i].name);
             }
         }
 
