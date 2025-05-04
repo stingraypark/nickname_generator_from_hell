@@ -29,7 +29,10 @@ export const data = {
         {name: "봉순", gender: "F"},
         {name: "점복", gender: "F"},
         {name: "금례", gender: "F"},
-        {name: "금자", gender: "F"}
+        {name: "금자", gender: "F"},
+        {name: "복례", gender: "F"},
+        {name: "철수", gender: "M"},
+        {name: "영희", gender: "F"}
     ],
     familyNames: [
         "김",
@@ -149,8 +152,8 @@ export const data = {
         ],
         [
             [["축구장", ["sports_soccer"]]],
-            [["파울", []], ["핸들", []]],
-            [["전문가", []], ["마스터", []]]
+            [["파울", []], ["핸들", []], ["반칙", []]],
+            [["원툴", []]]
         ],
         [
             [["문화유산", []], ["길거리", []], ["담장", []]],
@@ -170,5 +173,15 @@ export const data = {
             [["물총", []], ["분무기", ["household_supplies", "cleaning"]]],
             [["난사범", []]]
         ]
-    ]    
+    ],
+    profileBackgroundColors: [
+        "#CF8F8F",
+        "#CFA58F",
+        "#CCCF8F",
+        "#8FCF97",
+        "#8FCFC8",
+        "#8F9FCF",
+        "#B18FCF",
+        "#CF8FC3"
+    ]
 };

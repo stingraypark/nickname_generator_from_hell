@@ -18,9 +18,11 @@
         <!-- App -->
         <div class="app">
             <div class="group">
-                <img class="profile" src="images/favicon.ico">
+                <div id="profile-full" class="profile-background">
+                    <img id="profile-img" src="../images/profile_icons/book.svg">
+                </div>
 
-                <p id="nickname-field" class="nickname-field">NicknamePlaceHolder</p>
+                <p id="nickname-field" class="nickname-field"></p>
             </div>
 
             <div class="actions">
@@ -32,7 +34,7 @@
                     <img src="images/icons/file.svg" class="icon">
                     닉네임 복사
                 </button>
-                <button id="copy-btn" class="action-btn">
+                <button id="download-profile-btn" class="action-btn">
                     <img src="images/icons/download.svg" class="icon">
                     프로필 다운로드
                 </button>
@@ -80,6 +82,7 @@
         </div>
 
         <!-- Link JS -->
-        <script type="module" src="scripts/generator.js"></script>
+        <script src="scripts/html2canvas.min.js"></script>
+        <script type="module" src="scripts/script.js"></script>
     </body>
 </html>
