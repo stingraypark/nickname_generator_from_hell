@@ -17,10 +17,61 @@
     <body>
         <!-- App -->
         <div class="app">
-            <div class="result">
+            <div class="group">
                 <img class="profile" src="images/favicon.ico">
 
                 <p id="nickname-field" class="nickname-field">NicknamePlaceHolder</p>
+            </div>
+
+            <div class="actions">
+                <button id="generate-btn" class="action-btn">
+                    <img src="images/icons/arrow-clockwise.svg" class="icon">
+                    생성
+                </button>
+                <button id="copy-btn" class="action-btn">
+                    <img src="images/icons/file.svg" class="icon">
+                    복사
+                </button>
+            </div>
+
+            <div class="group options">
+                <div class="toggle-wrapper">
+                    <label class="toggle-label">
+                        <input type="checkbox" id="useName" class="toggle-input" checked>
+                        <span class="toggle-slider"></span>
+                        <span class="toggle-text">이름 포함</span>
+                    </label>
+                </div>
+
+                <div class="toggle-wrapper">
+                    <label class="toggle-label">
+                        <input type="checkbox" id="dontUseManualName" class="toggle-input" checked>
+                        <span class="toggle-slider"></span>
+                        <span class="toggle-text">랜덤 이름 사용</span>
+                    </label>
+                </div>
+
+                <div class="select-group">
+                    <label for="gender-select">랜덤 이름 성별</label>
+                    <select id="nameGender" class="select-input">
+                        <option value="any">랜덤</option>
+                        <option value="M">남성</option>
+                        <option value="F">여성</option>
+                    </select>
+                </div>         
+
+                <div class="input-group">
+                    <label for="nickname-input">수동 이름 입력</label>
+                    <input type="text" id="manualName" class="text-input" placeholder="이름을 입력하세요">
+                </div>
+
+                <div class="toggle-wrapper">
+                    <label class="toggle-label">
+                        <input type="checkbox" id="removeSpace" class="toggle-input" checked>
+                        <span class="toggle-slider"></span>
+                        <span class="toggle-text">공백 제거</span>
+                    </label>
+                </div>
             </div>
         </div>
 

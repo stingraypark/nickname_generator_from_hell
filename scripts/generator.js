@@ -5,13 +5,13 @@ function pickRandom(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
 }
 
+// Generate nickname function
 function generateNickname() {
     // OPTIONS - CHANGE!!!
     const useName = true; // true/false
     const useManualName = false; // true/false
     const manualName = "박가온"; // string
     const useManualGender = true; // true/false
-    const namefeature = ""; // CHANGE!!!!CHANGE!!!!CHANGE!!!!
     const nameGender = "M"; // F/M
     const removeSpace = true; // true/false
 
@@ -49,12 +49,28 @@ function generateNickname() {
         result = result.replace(/\s/g, '');
     }
 
-    // Return
-    return result;
+    // Update
+    document.getElementById("nickname-field").innerText = result;
+
+    // Clear copy feedback
+    const feedback = '<img src="images/icons/file.svg" class="icon">\n복사';
+    document.getElementById("copy-btn").innerHTML = feedback;
 }
 
-// TEST!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-for (let i = 0; i < 20; i++){
-    let nickname = generateNickname();
-    document.getElementById("nickname-field").innerText = nickname;
+document.getElementById("generate-btn").addEventListener("click", generateNickname);
+
+generateNickname()
+
+// Copy result function
+function copyNickname() {
+    // Copy to clipboard
+    const nickname = document.getElementById("nickname-field").innerText;
+    navigator.clipboard.writeText(nickname);
+    document.getElementById("copy-btn").addEventListener("click", copyNickname);
+
+    // Copy feedback
+    const feedback = '<img src="images/icons/file-check.svg" class="icon">\n복사 완료!';
+    document.getElementById("copy-btn").innerHTML = feedback;
 }
+
+document.getElementById("copy-btn").addEventListener("click", copyNickname);

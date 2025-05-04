@@ -1,35 +1,35 @@
 export const data = {
     names: [
-        {name: "팔광", gender: "M", feature: "쎄보이는"},
-        {name: "억두", gender: "M", feature: "쎄보이는"},
-        {name: "혁팔", gender: "M", feature: "쎄보이는"},
-        {name: "팔식", gender: "M", feature: "쎄보이는"},
-        {name: "두식", gender: "M", feature: "쎄보이는"},
-        {name: "무혁", gender: "M", feature: "쎄보이는"},
-        {name: "암철", gender: "M", feature: "쎄보이는"},
-        {name: "철혁", gender: "M", feature: "쎄보이는"},
-        {name: "철혁", gender: "M", feature: "쎄보이는"},
-        {name: "철옥", gender: "F", feature: "쎄보이는"},
-        {name: "쎄리", gender: "F", feature: "쎄보이는"},
-        {name: "철숙", gender: "F", feature: "쎄보이는"},
-        {name: "팔숙", gender: "F", feature: "쎄보이는"},
-        {name: "두옥", gender: "F", feature: "쎄보이는"},
-        {name: "두옥", gender: "F", feature: "쎄보이는"},
-        {name: "춘배", gender: "M", feature: "촌스러운"},
-        {name: "춘삼", gender: "M", feature: "촌스러운"},
-        {name: "덕배", gender: "M", feature: "촌스러운"},
-        {name: "춘섭", gender: "M", feature: "촌스러운"},
-        {name: "복남", gender: "M", feature: "촌스러운"},
-        {name: "팔봉", gender: "M", feature: "촌스러운"},
-        {name: "봉팔", gender: "M", feature: "촌스러운"},
-        {name: "덕구", gender: "M", feature: "촌스러운"},
-        {name: "영배", gender: "M", feature: "촌스러운"},
-        {name: "점순", gender: "F", feature: "촌스러운"},
-        {name: "춘자", gender: "F", feature: "촌스러운"},
-        {name: "봉순", gender: "F", feature: "촌스러운"},
-        {name: "점복", gender: "F", feature: "촌스러운"},
-        {name: "금례", gender: "F", feature: "촌스러운"},
-        {name: "금자", gender: "F", feature: "촌스러운"},
+        {name: "팔광", gender: "M"},
+        {name: "억두", gender: "M"},
+        {name: "혁팔", gender: "M"},
+        {name: "팔식", gender: "M"},
+        {name: "두식", gender: "M"},
+        {name: "무혁", gender: "M"},
+        {name: "암철", gender: "M"},
+        {name: "철혁", gender: "M"},
+        {name: "철혁", gender: "M"},
+        {name: "철옥", gender: "F"},
+        {name: "쎄리", gender: "F"},
+        {name: "철숙", gender: "F"},
+        {name: "팔숙", gender: "F"},
+        {name: "두옥", gender: "F"},
+        {name: "두옥", gender: "F"},
+        {name: "춘배", gender: "M"},
+        {name: "춘삼", gender: "M"},
+        {name: "덕배", gender: "M"},
+        {name: "춘섭", gender: "M"},
+        {name: "복남", gender: "M"},
+        {name: "팔봉", gender: "M"},
+        {name: "봉팔", gender: "M"},
+        {name: "덕구", gender: "M"},
+        {name: "영배", gender: "M"},
+        {name: "점순", gender: "F"},
+        {name: "춘자", gender: "F"},
+        {name: "봉순", gender: "F"},
+        {name: "점복", gender: "F"},
+        {name: "금례", gender: "F"},
+        {name: "금자", gender: "F"},
     ],
     familyNames: [
         "김",
@@ -71,29 +71,19 @@ export const data = {
             ["빌런"]
         ],
         [
-            ["경로당"],
+            ["경로당", "노인정"],
             ["지팡이", "틀니"],
-            ["도둑", "파괴범", "절도범"]
+            ["도둑", "파괴범"]
         ],
         [
-            ["노인정"],
-            ["지팡이", "틀니"],
-            ["도둑", "파괴범", "절도범"]
-        ],
-        [
-            ["어린이집"],
+            ["어린이집", "유치원"],
             ["가방", "장난감"], 
-            ["도둑", "절도범"]
-        ],
-        [
-            ["유치원"],
-            ["가방", "장난감"],
-            ["도둑", "절도범"]
+            ["도둑"]
         ],
         [
             ["길거리"],
             ["자전거", "킥보드"],
-            ["뺑소니", "절도범", "도둑"]
+            ["뺑소니"]
         ],
         [
             ["급식실"],
@@ -103,7 +93,7 @@ export const data = {
         [
             ["납골당"],
             ["유골"],
-            ["도둑", "절도범"]
+            ["도둑"]
         ],
         [
             ["교회", "성당"],
@@ -111,25 +101,9 @@ export const data = {
             ["연주자"]
         ],
         [
-            ["목욕탕"],
-            ["비누", "수건"],
-            ["도둑", "절도범"]
-        ],
-        [
-            ["키즈카페"],
-            ["인형", "장난감"],
-            ["도둑", "절도범"]
-        ],
-        [
             ["피시방"],
-            ["모니터", "키보드", "마우스"],
-            ["도둑", "샷건러", "파괴범", "절도범"]
-        ],
-        [
-            ["화장실"],
-            ["세면기", "소변기"],
-            ["똥", "설사", "오줌"],
-            ["테러범"]
+            ["키보드", "마우스", "모니터"],
+            ["샷건러"]
         ],
         [
             ["금연구역"],
@@ -147,29 +121,14 @@ export const data = {
             ["분실범"]
         ],
         [
-            ["헬스장"],
-            ["아령"],
-            ["도둑", "절도범"]
-        ],
-        [
             ["수영장",],
             ["오줌"],
             ["테러범"]
         ],
         [
-            ["지하철"],
-            ["게르마늄 팔찌", "코고리 마스크"],
-            ["판매원"]
-        ],
-        [
-            ["병원"],
-            ["붕대", "코고리 마스크"],
-            ["도둑", "절도범"]
-        ],
-        [
             ["시식 코너"],
-            ["전문", "담당"],
-            ["대식가", "푸드 파이터"]
+            ["전문"],
+            ["푸드 파이터"]
         ],
     ],
 };
