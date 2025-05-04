@@ -20,9 +20,15 @@ function generateNickname() {
     let result = ""
 
     // Add nicknames
+    let randomIconPath = "";
     const nicknameChunk = pickRandom(data.nicknameChunks);
     for (let i = 0; i < nicknameChunk.length; i++) {
-        result += `${pickRandom(nicknameChunk[i])} `;
+        const randomChunkItem = pickRandom(nicknameChunk[i]);
+        result += `${randomChunkItem[0]} `;
+
+        if (randomChunkItem[1].length > 0) {
+            randomIconPath = `../images/profile_icons/${pickRandom(randomChunkItem[1])}.svg`
+        }
     }
 
     // Add manual name
@@ -54,7 +60,7 @@ function generateNickname() {
     document.getElementById("nickname-field").innerText = result;
 
     // Clear copy feedback
-    const feedback = '<img src="images/icons/file.svg" class="icon">\n복사';
+    const feedback = '<img src="images/icons/file.svg" class="icon">\n닉네임 복사';
     document.getElementById("copy-btn").innerHTML = feedback;
 }
 
@@ -70,7 +76,7 @@ function copyNickname() {
     document.getElementById("copy-btn").addEventListener("click", copyNickname);
 
     // Copy feedback
-    const feedback = '<img src="images/icons/file-check.svg" class="icon">\n복사 완료!';
+    const feedback = '<img src="images/icons/file-check.svg" class="icon">\n닉네임 복사 완료!';
     document.getElementById("copy-btn").innerHTML = feedback;
 }
 
